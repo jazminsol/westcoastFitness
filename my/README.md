@@ -73,6 +73,8 @@ App
  |
  |--LoginForm (child of App)
  |
+ |--NavButton(child of App)
+ |
  |--WorkoutContainer (child of App)
           |
         CardBox (child of WorkoutContainer)
