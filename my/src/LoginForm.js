@@ -8,7 +8,6 @@ export default function LoginForm() {
             <input type="text" placeholder="Password"></input>
             <br></br>
             <br></br>
-            <button>Login</button>
         </div>
     )
 }
