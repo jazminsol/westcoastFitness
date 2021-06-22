@@ -1,0 +1,60 @@
+{
+    "workouts": [
+    {
+    "name": "Lunges",
+    "difficulty": "Beginner",
+    "duration": "15 mins",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfPQ-Q-M2yYYWe7p9tDu-dHYwqP9nGjGlAMQ&usqp=CAU"
+    }, {
+    "name": "Pushups",
+    "difficulty": "Difficult",
+    "duration": "15 mins",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb1mRl79RQkS82jryUQKqcLITPdoYyryvHEQ&usqp=CAU"
+    }, {
+    "name": "Squats",
+    "difficulty": "Moderate",
+    "duration": "20 mins",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfPQ-Q-M2yYYWe7p9tDu-dHYwqP9nGjGlAMQ&usqp=CAU"
+    }, {
+    "name": "Dumbbell presses",
+    "difficulty": "Beginner",
+    "duration": "15 mins",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfPQ-Q-M2yYYWe7p9tDu-dHYwqP9nGjGlAMQ&usqp=CAU"
+    }, {
+    "name": "Treadmill",
+    "difficulty": "Beginner",
+    "duration": "30 mins",
+    "image": "https://preview.pixlr.com/images/800wm/1195/1/11951497246.jpg"
+    }, {
+    "name": "Deadlifts",
+    "difficulty": "Difficult",
+    "duration": "15 mins",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfPQ-Q-M2yYYWe7p9tDu-dHYwqP9nGjGlAMQ&usqp=CAU"
+    }, {
+    "name": "Burpees",
+    "difficulty": "Difficult",
+    "duration": "15 mins",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb1mRl79RQkS82jryUQKqcLITPdoYyryvHEQ&usqp=CAU"
+    }, {
+    "name": "Planks",
+    "difficulty": "Moderate",
+    "duration": "5 mins",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb1mRl79RQkS82jryUQKqcLITPdoYyryvHEQ&usqp=CAU"
+    }, {
+    "name": "Jumping Jacks",
+    "difficulty": "Beginner",
+    "duration": "15 mins",
+    "image": "https://preview.pixlr.com/images/800wm/1195/1/11951497246.jpg"
+    }, {
+    "name": "Bicycle Crunches",
+    "difficulty": "Moderate",
+    "duration": "10 mins",
+    "image": "https://preview.pixlr.com/images/800wm/1195/1/11951497246.jpg"
+    }, {
+    "name": "Squat Jumps",
+    "difficulty": "Moderate",
+    "duration": "10 mins",
+    "image": "https://preview.pixlr.com/images/800wm/1195/1/11951497246.jpg"
+    }
+    ]
+}
