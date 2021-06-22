@@ -1,25 +1,42 @@
 .App {
   text-align: center;
+  width: 95%;
+    height: 90vh;
+    /* border: 1px solid black;
+    padding: 8px; */
+    margin: auto;
+    
+   
 }
 
 .card-box {
-  margin: auto;
+  width: 80%;
+    height: 60vh;
+    border: 1px solid black;
+    padding: 8px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    
+  /* margin: auto;
   height: 55%;
   width: 280px;
   border: 1px solid black;
   border-radius: 16px;
   padding: 16px;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; */
 }
 
 .workout-card {
-  height: 55%;
+  height: 75%;
   width: 150px;
   border-radius: 12px;
   border: 1px solid black;
   margin: auto;
+  background-color: bisque;
 }
 
 .card-image {
-  width: 50%;
+  width: 90%;
 }
