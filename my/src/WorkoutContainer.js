@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-// import CardBox from "./CardBox"
+import CardBox from "./CardBox"
 
 export default function WorkoutContainer() {
 
@@ -8,13 +8,13 @@ export default function WorkoutContainer() {
     useEffect(() => {
         fetch(`http://localhost:3000/workouts`)
         .then(res => res.json())
-        .then(workoutData => console.log(workoutData))
+        .then(workoutData => setWorkoutCollection(workoutData))
     }, [])
 
     return (
         <div>
-            <h1>Welcome back, "user"!</h1>
-            {/* <CardBox /> */}
+            <h1>Welcome, user!</h1>
+            <CardBox workoutCollection={workoutCollection}/>
         </div>
     )
 }
