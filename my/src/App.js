@@ -13,7 +13,7 @@ function App() {
           <LoginForm />
           <NavButton />
         </Route>
-        <Route exact path="/workouts">
+        <Route exact path="/workoutcontainer">
           <WorkoutContainer />
         </Route>
       </Switch>

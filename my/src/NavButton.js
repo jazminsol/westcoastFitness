@@ -6,7 +6,7 @@ export default function NavButton() {
         <div>
             <button>
                 <NavLink
-                    to="/workouts"
+                    to="/workoutcontainer"
                     exact
                     >Login
                 </NavLink>
