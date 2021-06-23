@@ -1,28 +1,55 @@
 import React from 'react'
-import 'semantic-ui-css/semantic.min.css'
-import {Card, Image, Button} from "semantic-ui-react"
+// import 'semantic-ui-css/semantic.min.css'
+// import {Card, Image, Button} from "semantic-ui-react"
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 140,
+  },
+});
 
 function Cards( {workoutCollection } ) {
     return (
-     <Card.Group itemsPerRow={4}>
-         {workoutCollection.map(workout => 
-            <Card key={workout.name}>
-                <Image src={workout.image} className="workout-picture"/>
-                <Card.Content className="card-bottom">
-                    <Card.Header>{workout.name}</Card.Header>
-                    <Card.Meta>
-                        <span className="duration">Duration: {workout.duration}</span>
-                    </Card.Meta>
-                    <Card.Description>
-                        Challenge Level: {workout.difficulty}
-                    </Card.Description>
-                    <br></br>
-                    <Button.Group>
-                        <Button positive>Save</Button>
-                    </Button.Group>
-                </Card.Content>
-            </Card>)}
-     </Card.Group>
+     <div>
+         {workoutCollection.map(workout =>
+       <Card className={null}>
+        <CardActionArea>
+        <CardMedia
+          className="card=picture"
+          image={workout.image}
+          title="Exercise Rep"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {workout.name}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {workout.difficulty}
+            {workout.duration}
+          </Typography>
+        </CardContent>
+        </CardActionArea>
+        <CardActions>
+        <Button size="small" color="primary">
+          Share
+        </Button>
+        <Button size="small" color="primary">
+          Learn More
+        </Button>
+      </CardActions>
+    </Card> )}
+     </div>
     )
 }
 
