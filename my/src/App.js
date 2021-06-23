@@ -11,7 +11,6 @@ function App() {
       <Switch>
         <Route exact path="/">
           <LoginForm />
-          <NavButton />
         </Route>
         <Route exact path="/workoutcontainer">
           <WorkoutContainer />

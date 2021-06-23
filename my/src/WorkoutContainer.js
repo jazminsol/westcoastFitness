@@ -14,7 +14,7 @@ export default function WorkoutContainer() {
     }, [])
 
     return (
-        <div className="workoutContainer">
+        <div className="workout-container">
             <h1>Welcome, user!</h1>
             <CardBox workoutCollection={workoutCollection}/>
             <UpcomingList />
