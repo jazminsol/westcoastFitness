@@ -1,6 +1,6 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
-import {Card, Image} from "semantic-ui-react"
+import {Card, Image, Button} from "semantic-ui-react"
 
 function Cards( {workoutCollection } ) {
     return (
@@ -16,6 +16,10 @@ function Cards( {workoutCollection } ) {
                     <Card.Description>
                         Challenge Level: {workout.difficulty}
                     </Card.Description>
+                    <br></br>
+                    <Button.Group>
+                        <Button positive>Save</Button>
+                    </Button.Group>
                 </Card.Content>
             </Card>)}
      </Card.Group>

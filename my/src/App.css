@@ -5,7 +5,7 @@
     /* border: 1px solid black;
     padding: 8px; */
     margin: auto;
-
+    background-color: rgb(174, 202, 193);
 }
 
 .card-box {
@@ -30,4 +30,8 @@
 div.content.card-bottom {
   height: 200px;
   background-color: beige;
+}
+
+.sign-up-button {
+  margin: 3px;
 }
