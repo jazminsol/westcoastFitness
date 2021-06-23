@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function NavButton() {
     return (
         <div>
-            <button>
+            <button className="NavButton">
                 <NavLink
                     to="/workoutcontainer"
                     exact
