@@ -8,12 +8,7 @@
     /* background-color: rgb(174, 202, 193); */
 }
 
-.card-box {
- margin: auto;
-}
-
-.MuiCard-root {
- text-align: center;
- margin: auto;
- border: 1px solid rgb(178, 178, 240);
-}
+/* div.MuiGrid-root.card-box.MuiGrid-container {
+  background-image: linear-gradient( rgb(142, 169, 226), violet);
+  height: 40vh;
+} */

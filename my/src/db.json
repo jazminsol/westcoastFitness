@@ -12,13 +12,13 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb1mRl79RQkS82jryUQKqcLITPdoYyryvHEQ&usqp=CAU"
     }, 
     {
-    "name": "Jumping Jacks",
+    "name": "Swim",
     "difficulty": "Beginner",
     "duration": "15 mins",
-    "image": "https://preview.pixlr.com/images/800wm/1195/1/11951497246.jpg"
+    "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F35%2F2020%2F05%2F04%2Fcardio-workout-at-home-bridge-2000.jpg"
     }, 
     {
-    "name": "Dumbbell presses",
+    "name": "Bench",
     "difficulty": "Beginner",
     "duration": "15 mins",
     "image": "https://www.creativefabrica.com/wp-content/uploads/2018/12/Dumbbell-by-khld939-580x386.jpg"
@@ -27,7 +27,7 @@
     "name": "Treadmill",
     "difficulty": "Beginner",
     "duration": "30 mins",
-    "image": "https://preview.pixlr.com/images/800wm/1195/1/11951497246.jpg"
+    "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F35%2F2020%2F05%2F04%2Fcardio-workout-at-home-bridge-2000.jpg"
     }, 
     {
     "name": "Deadlifts",
@@ -42,10 +42,10 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb1mRl79RQkS82jryUQKqcLITPdoYyryvHEQ&usqp=CAU"
     }, 
     {
-    "name": "Bicycle Crunches",
+    "name": "Crunches",
     "difficulty": "Moderate",
     "duration": "10 mins",
-    "image": "https://preview.pixlr.com/images/800wm/1195/1/11951497246.jpg"
+    "image": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F35%2F2020%2F05%2F04%2Fcardio-workout-at-home-bridge-2000.jpg"
     }
     ],
     "users": [
