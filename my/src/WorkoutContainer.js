@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CardBox from "./CardBox"
+import UpcomingList from "./UpcomingList"
+import CompletedWorkouts from './CompletedWorkouts'
 
 export default function WorkoutContainer() {
 
@@ -12,9 +14,11 @@ export default function WorkoutContainer() {
     }, [])
 
     return (
-        <div>
+        <div className="workout-container">
             <h1>Welcome, user!</h1>
             <CardBox workoutCollection={workoutCollection}/>
+            <UpcomingList />
+            <CompletedWorkouts />
         </div>
     )
 }

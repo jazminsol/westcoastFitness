@@ -5,29 +5,15 @@
     /* border: 1px solid black;
     padding: 8px; */
     margin: auto;
-
+    /* background-color: rgb(174, 202, 193); */
 }
 
 .card-box {
-  width: 70%;
-  height: 70vh;
-  border: 5px solid rgb(110, 185, 127);
-  padding: 8x;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(110, 185, 127);
+ margin: auto;
 }
 
-.header {
-  color: red;
-}
-
-.workout-picture {
-  height: 90px;
-}
-
-div.content.card-bottom {
-  height: 200px;
-  background-color: beige;
+.MuiCard-root {
+ text-align: center;
+ margin: auto;
+ border: 1px solid rgb(178, 178, 240);
 }
