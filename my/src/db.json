@@ -81,8 +81,23 @@
     "completed-workouts": [
     {
     "name": "Mountain Biking",
-    "difficulty": "difficult",
-    "duration": "45 mins"
+    "date": "3 Days Ago"    
+    },
+    {
+    "name": "KickBoxing",
+    "date": "1 Week Ago"    
+    },
+    {
+    "name": "H.I.I.T",
+    "date": "1 Week Ago"    
+    },
+    {
+    "name": "Sprints",
+    "date": "1 Week Ago"    
+    },
+    {
+    "name": "Rowing",
+    "date": "2 Weeks Ago"    
     }
     ]
 }
