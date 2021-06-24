@@ -14,7 +14,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { NavLink } from "react-router-dom"
 
-
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -33,6 +32,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    border: "1px solid black",
+    padding: "8px",
+    borderRadius: "16px",
+    background: "white"
   },
   avatar: {
     margin: theme.spacing(1),
@@ -46,11 +49,13 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, 0, 2),
   },
 }));
+
 export default function SignIn() {
   const classes = useStyles();
+
   return (
-    <Container component="main" maxWidth="xs">
-        <h1>WestCoast Fitness</h1>
+    <Container component="main" maxWidth="xs" className="login-container">
+        <h1 style={{textAlign: "center", color: "white", fontSize: "45px", fontFamily: "Lucida Console" }}>WestCoast Fitness</h1>
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -65,10 +70,10 @@ export default function SignIn() {
             margin="normal"
             required
             fullWidth
-            id="username"
-            label="User Name"
-            name="username"
-            autoComplete="username"
+            id="name"
+            label="Name"
+            name="name"
+            autoComplete="name"
             autoFocus
           />
           <TextField
@@ -82,25 +87,25 @@ export default function SignIn() {
             id="password"
             autoComplete="current-password"
           />
-          <FormControlLabel
+          {/* <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
-          />
+          /> */}
           <Button
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
-
           ><NavLink
-            to="/workoutcontainer"
+            style={{color: "white"}}
+            to="/main-page"
             exact
             >Login
             </NavLink>
           </Button>
           <Grid container>
-            <Grid item xs>
+            {/* <Grid item xs>
               <Link href="#" variant="body2">
                 Forgot password?
               </Link>
@@ -109,12 +114,12 @@ export default function SignIn() {
               <Link href="#" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
-            </Grid>
+            </Grid> */}
           </Grid>
         </form>
       </div>
       <Box mt={8}>
-        <Copyright />
+        {/* <Copyright /> */}
       </Box>
     </Container>
   );

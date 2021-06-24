@@ -1,44 +1,39 @@
 .App {
-  text-align: center;
-  width: 95%;
-    height: 90vh;
-    /* border: 1px solid black;
-    padding: 8px; */
-    margin: auto;
-    
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background-image: url(https://images.unsplash.com/photo-1460627390041-532a28402358?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhY2glMjBzdW5zZXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.Box {
-  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fgym-background&psig=AOvVaw314uQXMh55vEpDK7KsCjQu&ust=1624483359404000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCJjitKCWrPECFQAAAAAdAAAAABAJ;")
-}
-.card-box {
-  width: 80%;
-    height: 60vh;
-    border: 1px solid black;
-    padding: 8px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    justify-content: space-around;
-    
-  /* margin: auto;
-  height: 55%;
-  width: 280px;
-  border: 1px solid black;
-  border-radius: 16px;
-  padding: 16px;
-  flex-wrap: nowrap; */
-}
+/* .login-container {
+  background-image: url(https://images.unsplash.com/photo-1460627390041-532a28402358?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhY2glMjBzdW5zZXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
+} */
 
-.workout-card {
-  height: 75%;
-  width: 150px;
-  border-radius: 12px;
-  border: 1px solid black;
+.main-page-div {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
   margin: auto;
-  background-color: bisque;
+  align-items: center;
+  justify-items: center;
 }
 
-.card-image {
-  width: 90%;
+/* .cardbox-div {
+  
+} */
+
+.workout-container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+body {
+  background-image: linear-gradient(pink, rgb(240, 240, 170));
 }
