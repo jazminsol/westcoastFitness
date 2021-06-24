@@ -1,5 +1,4 @@
 import React from 'react'
-// import MediaCard from "./Card"
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -12,20 +11,33 @@ import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 148,
-    height: 242
+    minWidth: 150,
+    height: 242,
+    backgroundColor: "salmon",
+    borderRadius: "16px",
+    margin: "auto",
+    border: "3px solid black",
   },
   media: {
-    height: 60,
+    height: 65,
   },
+  gridContainer: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, 150px)",
+    gridRowGap: "24px",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "auto",
+    width: "50%",
+  }
 });
 
 
 function CardBox( {workoutCollection } ) {
     const classes = useStyles();
 
-    return (
-     <Grid container>
+    return (  
+     <Grid container className={classes.gridContainer}>
          {workoutCollection.map(workout =>
             <Card key={workout.name} className={classes.root} variant="outlined">
                 <CardActionArea>
@@ -38,15 +50,16 @@ function CardBox( {workoutCollection } ) {
                     <Typography gutterBottom variant="h5" component="h2">
                     {workout.name}
                     </Typography>
+                    <hr></hr>
                     <Typography variant="body2" color="textSecondary" component="p">
-                    Challenge Level: {workout.difficulty}
+                    Level: {workout.difficulty}
                     <br></br>
                     Duration: {workout.duration}
                     </Typography>
                  </CardContent>
                 </CardActionArea>
                 <CardActions text-align="center">
-                    <Button size="small" color="primary" style={{backgroundColor: "lightgreen"}}>
+                    <Button onClick={() => console.log("Working!")} size="small" color="primary" style={{backgroundColor: "lightgreen"}}>
                         Sign Up
                     </Button>
                     <Button size="small" color="primary" style={{backgroundColor: "pink"}}>

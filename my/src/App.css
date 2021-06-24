@@ -1,19 +1,39 @@
 .App {
-  text-align: center;
-  width: 95%;
-    height: 90vh;
-    /* border: 1px solid black;
-    padding: 8px; */
-    margin: auto;
-    /* background-color: rgb(174, 202, 193); */
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background-image: url(https://images.unsplash.com/photo-1460627390041-532a28402358?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhY2glMjBzdW5zZXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.card-box {
- margin: auto;
+/* .login-container {
+  background-image: url(https://images.unsplash.com/photo-1460627390041-532a28402358?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhY2glMjBzdW5zZXR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80);
+} */
+
+.main-page-div {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
 }
 
-.MuiCard-root {
- text-align: center;
- margin: auto;
- border: 1px solid rgb(178, 178, 240);
+/* .cardbox-div {
+  
+} */
+
+.workout-container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+body {
+  background-image: linear-gradient(pink, rgb(240, 240, 170));
 }
