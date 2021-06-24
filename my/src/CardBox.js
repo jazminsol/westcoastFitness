@@ -13,10 +13,10 @@ const useStyles = makeStyles({
   root: {
     minWidth: 150,
     height: 242,
-    backgroundColor: "lavender",
+    backgroundColor: "salmon",
     borderRadius: "16px",
     margin: "auto",
-    border: "3px solid magenta",
+    border: "3px solid black",
   },
   media: {
     height: 65,
@@ -24,11 +24,11 @@ const useStyles = makeStyles({
   gridContainer: {
     display: "grid",
     gridTemplateColumns: "repeat(4, 150px)",
-    gridRowGap: "8px",
+    gridRowGap: "24px",
     justifyContent: "space-between",
     alignItems: "center",
     padding: "auto",
-    width: "55%"
+    width: "50%",
   }
 });
 
@@ -36,7 +36,7 @@ const useStyles = makeStyles({
 function CardBox( {workoutCollection } ) {
     const classes = useStyles();
 
-    return (
+    return (  
      <Grid container className={classes.gridContainer}>
          {workoutCollection.map(workout =>
             <Card key={workout.name} className={classes.root} variant="outlined">
@@ -59,7 +59,7 @@ function CardBox( {workoutCollection } ) {
                  </CardContent>
                 </CardActionArea>
                 <CardActions text-align="center">
-                    <Button size="small" color="primary" style={{backgroundColor: "lightgreen"}}>
+                    <Button onClick={() => console.log("Working!")} size="small" color="primary" style={{backgroundColor: "lightgreen"}}>
                         Sign Up
                     </Button>
                     <Button size="small" color="primary" style={{backgroundColor: "pink"}}>

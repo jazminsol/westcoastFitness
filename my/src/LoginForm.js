@@ -33,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    border: "1px solid black",
+    padding: "8px",
+    borderRadius: "16px",
+    background: "white"
   },
   avatar: {
     margin: theme.spacing(1),
@@ -51,8 +55,8 @@ export default function SignIn() {
   const classes = useStyles();
 
   return (
-    <Container component="main" maxWidth="xs">
-        <h1>WestCoast Fitness</h1>
+    <Container component="main" maxWidth="xs" className="login-container">
+        <h1 style={{textAlign: "center", color: "white", fontSize: "45px", fontFamily: "Lucida Console" }}>WestCoast Fitness</h1>
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -84,10 +88,10 @@ export default function SignIn() {
             id="password"
             autoComplete="current-password"
           />
-          <FormControlLabel
+          {/* <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
-          />
+          /> */}
           <Button
             type="submit"
             fullWidth
@@ -95,7 +99,8 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           ><NavLink
-            to="/workoutcontainer"
+            style={{color: "white"}}
+            to="/main-page"
             exact
             >Login
             </NavLink>
