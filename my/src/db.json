@@ -56,5 +56,10 @@
     "duration": "10 mins",
     "image": "https://preview.pixlr.com/images/800wm/1195/1/11951497246.jpg"
     }
+    ], 
+    "users" : [
+        {
+            "username": " "
+        }
     ]
 }

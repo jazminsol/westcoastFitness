@@ -12,7 +12,7 @@ export default function WorkoutContainer() {
     }, [])
 
     return (
-        <div>
+        <div className= "Box">
             <h1>Welcome, user!</h1>
             <CardBox workoutCollection={workoutCollection}/>
         </div>
