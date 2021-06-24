@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MainPage() {
+export default function MainPage( {addWorkout } ) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -46,7 +46,7 @@ export default function MainPage() {
   })
 
   const handleFormChange = (event) => {
-    //   console.log(event.target.value)
+      console.log(event.target.value)
       setFormData(
           {...formData,
         [event.target.name]: event.target.value}
@@ -63,6 +63,8 @@ export default function MainPage() {
           },
           body: JSON.stringify(formData)
       })
+      .then(res => res.json())
+      .then(newWorkout => addWorkout(newWorkout))
   }
 
   return (
@@ -95,6 +97,9 @@ export default function MainPage() {
       </CardActions>
     </Card>
     </div>
+
+
+
     <div className="enter-workouts-card">
     <Card className={classes.root}>
       <CardActionArea>
@@ -117,9 +122,9 @@ export default function MainPage() {
         <Button style={{textDecoration: "underline"}} size="small" color="primary" onClick={handleClickOpen}>
             Enter
         </Button>
-        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <form onSubmit={submitWorkoutForm}>
+        <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" useref="entry-form">
         <DialogTitle id="form-dialog-title">Enter Your Workout!</DialogTitle>
+        <form onSubmit={(e) => submitWorkoutForm(e)}>
         <DialogContent>
           <DialogContentText>
             Please make sure to include what exercise you did, how long it took, and
@@ -127,6 +132,7 @@ export default function MainPage() {
           </DialogContentText>
           <TextField
             autoFocus
+            name="name"
             margin="dense"
             label="Exercise"
             type="text"
@@ -136,6 +142,7 @@ export default function MainPage() {
           />
             <TextField
             autoFocus
+            name="duration"
             margin="dense"
             label="Duration"
             type="text"
@@ -145,6 +152,7 @@ export default function MainPage() {
           />
             <TextField
             autoFocus
+            name="difficulty"
             margin="dense"
             label="Difficulty"
             type="text"
@@ -166,6 +174,9 @@ export default function MainPage() {
       </CardActions>
     </Card>
     </div>
+
+
+
     <div className="workout-folder-card">
     <Card className={classes.root}>
       <CardActionArea>
@@ -186,7 +197,7 @@ export default function MainPage() {
       <CardActions>
         <Button size="small" color="primary">
         <NavLink
-            to="/available-workouts"
+            to="/completed-workouts"
             exact
             >Enter
             </NavLink>

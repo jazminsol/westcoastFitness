@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.error.main,
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -56,9 +56,10 @@ export default function SignIn() {
 
   return (
     <Container component="main" maxWidth="xs" className="login-container">
-        <h1 style={{textAlign: "center", color: "white", fontSize: "45px", fontFamily: "Lucida Console" }}>WestCoast Fitness</h1>
+        {/* <h1 style={{textAlign: "center", color: "white", fontSize: "45px", fontFamily: "Lucida Console" }}>WestCoast Fitness</h1> */}
       <CssBaseline />
       <div className={classes.paper}>
+          <h1 style={{color: "hotpink"}}>WestCoast Fitness</h1>
         <Avatar className={classes.avatar}>
           {/* <LockOutlinedIcon /> */}
         </Avatar>
@@ -98,7 +99,7 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             className={classes.submit}
-          ><NavLink
+          > <NavLink
             style={{color: "white"}}
             to="/main-page"
             exact
