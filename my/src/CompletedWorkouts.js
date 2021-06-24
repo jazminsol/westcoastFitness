@@ -5,20 +5,29 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
+import { Paper } from '@material-ui/core';
 // import ImageIcon from '@material-ui/icons/Image';
 // import WorkIcon from '@material-ui/icons/Work';
 // import BeachAccessIcon from '@material-ui/icons/BeachAccess';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      width: '100%',
-      maxWidth: 360,
+      width: '180px',
+      maxWidth: "200px",
     //   backgroundColor: theme.palette.background.paper,
       padding: "6px",
       borderRadius: "16px",
       justifyContent: "space-around",
-      backgroundColor: "salmon"
+      backgroundColor: "lightgreen",
+      margin: "auto"
     },
+    paper: {
+        borderRadius: "16px",
+        alignItems: "center",
+        justifyItems: "center",
+        minWidth: "250px",
+        backgroundColor: "salmon"
+    }
   }));
 
 function CompletedWorkouts( {completedWorkouts } ) {
@@ -26,22 +35,21 @@ function CompletedWorkouts( {completedWorkouts } ) {
 
     return (
         // <ul style={{listStyleType: "none"}} className="completed-div">
-        <div>
-            <h1 style={{color: "white", textAlign: "center"}}>Completed</h1>
+        <Paper className={classes.paper}>
+            <h1 style={{color: "green", textAlign: "center"}}>Completed</h1>
             {completedWorkouts.map(workout =>  
-            <li>
+            <p>
                  <List className={classes.root}>
                  <ListItem>
                    <ListItemAvatar>
-                     <Avatar style={{color: "green", backgroundColor: "white"}}>
-                       [X]
+                     <Avatar size="small" style={{color: "green", backgroundColor: "green"}}>
                      </Avatar>
                    </ListItemAvatar>
                    <ListItemText primary={<strong>{workout.name}</strong>} secondary={workout.date} />
                  </ListItem>
                </List>
-               </li> )}   
-        </div>
+               </p> )}   
+        </Paper>
     )
 }
 
