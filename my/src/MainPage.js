@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -38,6 +38,32 @@ export default function MainPage() {
   const handleClose = () => {
     setOpen(false);
   };
+  
+  const [formData, setFormData] = useState({
+      name: "",
+      difficulty: "",
+      duration: ""
+  })
+
+  const handleFormChange = (event) => {
+    //   console.log(event.target.value)
+      setFormData(
+          {...formData,
+        [event.target.name]: event.target.value}
+      );
+  }
+
+  const submitWorkoutForm = (event) => {
+      event.preventDefault();
+      alert("Submitted Workout!")
+      fetch(`http://localhost:3000/completed-workouts`, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(formData)
+      })
+  }
 
   return (
     <div className="main-page-div">
@@ -47,7 +73,7 @@ export default function MainPage() {
         <CardMedia
           className={classes.media}
           image="https://i.pinimg.com/originals/6a/3d/2e/6a3d2e7f41c7cd81a7905087df1e19fd.jpg"
-          title="Contemplative Reptile"
+          title="Exercising Man"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
@@ -63,7 +89,7 @@ export default function MainPage() {
             <NavLink
             to="/available-workouts"
             exact
-            >Enter
+            >Explore
             </NavLink>
         </Button>
       </CardActions>
@@ -75,7 +101,7 @@ export default function MainPage() {
         <CardMedia
           className={classes.media}
           image="https://png.pngtree.com/png-vector/20190116/ourmid/pngtree-bme-style-cartoon-hand-drawn-notebook-pen-and-paper-png-image_378866.jpg"
-          title="Contemplative Reptile"
+          title="Noteboard ClipArt"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
@@ -88,11 +114,11 @@ export default function MainPage() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <div>
-        <Button size="small" color="primary" onClick={handleClickOpen}>
+        <Button style={{textDecoration: "underline"}} size="small" color="primary" onClick={handleClickOpen}>
             Enter
         </Button>
         <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+        <form onSubmit={submitWorkoutForm}>
         <DialogTitle id="form-dialog-title">Enter Your Workout!</DialogTitle>
         <DialogContent>
           <DialogContentText>
@@ -102,38 +128,41 @@ export default function MainPage() {
           <TextField
             autoFocus
             margin="dense"
-            id="exercise"
             label="Exercise"
             type="text"
             fullWidth
+            // value={formData.name}
+            onChange={handleFormChange}
           />
             <TextField
             autoFocus
             margin="dense"
-            id="duration"
             label="Duration"
             type="text"
             fullWidth
+            // value={formData.duration}
+            onChange={handleFormChange}
           />
             <TextField
             autoFocus
             margin="dense"
-            id="difficulty"
             label="Difficulty"
             type="text"
             fullWidth
+            // value={formData.difficulty}
+            onChange={handleFormChange}
           />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose} type="submit" color="primary">
             Submit
           </Button>
         </DialogActions>
+        </form>
       </Dialog>
-        </div>
       </CardActions>
     </Card>
     </div>
@@ -143,7 +172,7 @@ export default function MainPage() {
         <CardMedia
           className={classes.media}
           image="https://i.pinimg.com/originals/5a/61/c8/5a61c8022e00df65106f931360d93da0.png"
-          title="Contemplative Reptile"
+          title="Heart Folder"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

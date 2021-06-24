@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -17,28 +17,37 @@ const useStyles = makeStyles({
     borderRadius: "16px",
     margin: "auto",
     border: "3px solid black",
+    padding: "6px",
   },
   media: {
     height: 65,
+    borderRadius: "8px",
   },
   gridContainer: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 150px)",
+    gridTemplateColumns: "repeat(6, 200px)",
     gridRowGap: "24px",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "auto",
-    width: "50%",
+    // padding: "auto",
+    width: "100%",
+    margin: "auto"
   }
 });
 
 
-function CardBox( {workoutCollection } ) {
+function CardBox({filteredWorkoutCollection, searchWorkouts}) {
     const classes = useStyles();
 
+    const handleChange = (event) => {
+      searchWorkouts(event.target.value)
+    }
+
     return (  
+      <Fragment>
+      <input type="text" placeholder="Search Workouts" onChange={(e) => handleChange(e)}></input>
      <Grid container className={classes.gridContainer}>
-         {workoutCollection.map(workout =>
+         {filteredWorkoutCollection.map(workout =>
             <Card key={workout.name} className={classes.root} variant="outlined">
                 <CardActionArea>
                  <CardMedia 
@@ -62,12 +71,13 @@ function CardBox( {workoutCollection } ) {
                     <Button onClick={() => console.log("Working!")} size="small" color="primary" style={{backgroundColor: "lightgreen"}}>
                         Sign Up
                     </Button>
-                    <Button size="small" color="primary" style={{backgroundColor: "pink"}}>
+                    <Button onClick={() => console.log("Also Working!")}size="small" color="primary" style={{backgroundColor: "pink"}}>
                         Dismiss
                     </Button>
                 </CardActions>
             </Card>)}
      </Grid>
+     </Fragment>
     )
 }
 

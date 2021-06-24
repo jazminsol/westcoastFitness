@@ -9,12 +9,20 @@ import CardBox from "./CardBox";
 function App() {
 
   const [workoutCollection, setWorkoutCollection] = useState([])
+  const [filteredWorkoutCollection, setFilteredWorkoutCollection] = useState([])
 
   useEffect(() => {
     fetch(`http://localhost:3000/workouts`)
     .then(res => res.json())
-    .then(workoutData => setWorkoutCollection(workoutData))
+    .then(workoutData => {
+      setWorkoutCollection(workoutData)
+      setFilteredWorkoutCollection(workoutData)
+    })
   }, [])
+
+  const searchWorkouts = (searchTerm) => {
+    return setFilteredWorkoutCollection(workoutCollection.filter(workout => workout.difficulty.includes(searchTerm)))
+  }
 
   return (
     <div className="App">
@@ -26,7 +34,7 @@ function App() {
           <MainPage />
         </Route>
         <Route exact path="/available-workouts">
-          <CardBox workoutCollection={workoutCollection}/>
+          <CardBox searchWorkouts={searchWorkouts} filteredWorkoutCollection={filteredWorkoutCollection}/>
         </Route>
       </Switch>
     </div>
